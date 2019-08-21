@@ -14,7 +14,7 @@ namespace MyLeasing.Web.Data.Entities
         [MaxLength(50, ErrorMessage = "The {0} field can not have more than {1} characters.")]
         [Required(ErrorMessage = "The field {0} is mandatory.")]
         [Display(Name = "First Name")]
-        public string FirsName { get; set; }
+        public string FirstName { get; set; }
 
         [MaxLength(50, ErrorMessage = "The {0} field can not have more than {1} characters.")]
         [Required(ErrorMessage = "The field {0} is mandatory.")]
@@ -32,10 +32,10 @@ namespace MyLeasing.Web.Data.Entities
         public string Address { get; set; }
 
         [Display (Name = "Owner Name")]
-        public string FullName => $"{FirsName} {LastName}";
+        public string FullName => $"{FirstName} {LastName}";
 
         [Display(Name = "Owner Name")]
-        public string FullNameWithDocument => $"{FirsName} {LastName} - {Document}";
+        public string FullNameWithDocument => $"{FirstName} {LastName} - {Document}";
 
         public ICollection<Property> Properties { get; set; }
 
