@@ -32,10 +32,10 @@ namespace MyLeasing.Web.Data.Entities
         public string Address { get; set; }
 
         [Display (Name = "Owner Name")]
-        public string FullName => $"{FullName} {LastName}";
+        public string FullName => $"{FirsName} {LastName}";
 
         [Display(Name = "Owner Name")]
-        public string FullNameWithDocument => $"{FullName} {LastName} - {Document}";
+        public string FullNameWithDocument => $"{FirsName} {LastName} - {Document}";
 
         public ICollection<Property> Properties { get; set; }
 
